@@ -1,0 +1,203 @@
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 1200px)
+{
+  .container{
+    max-width: 1140px;
+  }
+}
+.d-flex{
+  display: flex;
+  flex-direction: row;
+  background: #f6f6f6;
+  border-radius: 0 0 5px 5px;
+  padding: 25px;
+}
+form{
+  flex: 4;
+}
+.Yorder{
+  flex: 2;
+}
+.title{
+  background-color: rgb(253, 161, 207);
+  padding: 20px;
+  color: #f6f6f6;
+}
+h2{
+  margin: 0;
+  padding-left: 15px; 
+}
+.required{
+  color: red;
+}
+label, table{
+  display: block;
+  margin: 15px;
+}
+label>span{
+  float: left;
+  width: 25%;
+  margin-top: 12px;
+  padding-right: 10px;
+}
+input[type="text"], input[type="tel"], input[type="email"], select
+{
+  width: 70%;
+  height: 30px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dadada;
+  color: #888;
+}
+select{
+  width: 72%;
+  height: 45px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.Yorder{
+  margin-top: 15px;
+  height: 600px;
+  padding: 20px;
+  border: 1px solid #dadada;
+}
+table{
+  margin: 0;
+  padding: 0;
+}
+th{
+  border-bottom: 1px solid #dadada;
+  padding: 10px 0;
+}
+tr>td:nth-child(1){
+  text-align: left;
+  color: #141412;
+}
+tr>td:nth-child(2){
+  text-align: right;
+  color: #52ad9c;
+}
+td{
+  border-bottom: 1px solid #dadada;
+  padding: 25px 25px 25px 0;
+}
+
+p{
+  display: block;
+  color: #e2277f;
+  margin: 0;
+  padding-left: 25px;
+}
+.Yorder>div{
+  padding: 15px 0; 
+}
+
+button{
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(238, 21, 130);
+  padding-left:30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: rgb(240, 240, 244);
+  font-weight: bolder;
+  transition: 1s;
+}
+
+button:hover{
+  transition: 1s;
+  cursor: pointer;
+  color: #f8f8f3;
+  font-weight: bolder;
+  background-color: rgb(71, 232, 7);
+}
+
+table {
+  border-collapse: collapse;
+  width: 40%;
+
+
+}
+td, th {
+  border: 1px solid black;
+    text-align: center; 
+}
+
+.navbar{
+  background-color: hotpink;
+}
+
+.edit{
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(217, 34, 245);
+  padding-left:30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: rgb(246, 243, 245);
+  font-weight: bolder;
+  transition: 0.02s;
+}
+
+.edit:hover{
+  transition: 0.02s;
+  cursor: pointer;
+  color: black;
+  font-weight: bolder;
+  background-color: rgb(172, 231, 76);
+}
+
+/* Delete */
+.delete{
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(205, 33, 231);
+  padding-left:30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: rgb(250, 246, 246);
+  font-weight: bolder;
+  transition: .02s;
+}
+
+.delete:hover{
+  transition: 0.02s;
+  cursor: pointer;
+  color: rgb(250, 247, 247);
+  font-weight: bolder;
+  background-color: rgb(241, 32, 0);
+}
+
+/* Card Template for My account page */
+body {
+	background-color: #f5f7fa;
+  color: Black;
+}
+
+.testimonial-card .card-up {
+  height: 120px;
+  overflow: hidden;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.aqua-gradient {
+  background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
+}
+
+.testimonial-card .avatar {
+  width: 120px;
+  margin-top: -60px;
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}

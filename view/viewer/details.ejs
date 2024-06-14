@@ -1,0 +1,24 @@
+<%-include('../includes/header.ejs')%>
+
+      </head>
+
+      <body>
+            <!-- Navbar -->
+            <%-include('../includes/navbar.ejs')%>
+
+                  <main class="viewMovie text-center">
+                        <h1 class=" mt-4 "><u><b>Details</b></u></h1><br><br>
+                        <div>
+                              <h3><span><b>Product Name: </b></span><%= data.product_name%></h3>
+                              <h3><span><b>Product Price: </b></span><%= data.product_price%></h3>
+                              <h3><span><b>Product Company: </b></span><%= data.product_company%></h3><br>
+                              <img src="/<%= data.product_image[0]%>" alt="Image" height="100" style="margin-right: 10px">
+                              <img src="/<%= data.product_image[1]%>" alt="Image" height="100">
+                              <br><br>
+                              <td><a href="/editProduct/<%= data._id%>"><button class="edit" style="padding: 10px"type="submit">Edit</button></a></td>
+                              <td><a href="/deleteProduct/<%= data._id%>"><button class="delete" style="padding: 10px;" type="submit">Delete</button></a></td>
+                        </div>
+                  </main>
+
+                  <!-- Footer -->
+                  <%-include('../includes/footer.ejs')%>

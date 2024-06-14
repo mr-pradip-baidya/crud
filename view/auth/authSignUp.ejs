@@ -1,0 +1,106 @@
+<%-include('../includes/header.ejs')%>
+
+      </head>
+
+      <body>
+            <!-- Navbar -->
+            <%-include('../includes/navbar.ejs')%>
+
+                  <!-- Form -->
+                  <main>
+                        <div class="container">
+                              <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                                    <div class="toast-header">
+                                          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                    </div>
+                                    <div class="toast-body">
+                                    <% if (typeof error !=="undefined" ) { %>
+                                          <div id="message-warning">
+                                                <p>
+                                                      <%= error %>
+                                                </p>
+                                                
+                                          </div>
+                                          <% } %>
+                                    
+                                                <% if (typeof success !=="undefined" ) { %>
+                                                      <div id="message-success">
+                                                            <i class="fa fa-check"></i> <br />
+                                                            <p>
+                                                                  <%= success.msg %>
+                                                            </p>
+                                                      </div>
+                                                      <% } %>
+                                    </div>
+                              </div>
+
+                              
+                        </div>
+                        <div class="container mt-5">
+                              <div class="title">
+                                    <h2 class="text-center text-dark"><b><u>Signup</u></b></h2>
+
+                                   
+                              </div>
+                              <div class="d-flex">
+                                    <form action="/postAuthData" method="POST" enctype="multipart/form-data">
+
+                                          <label>
+                                                <span>Full Name : <span class="text-danger">*</span></span>
+                                                <input type="text" name="full_name" id="full_name">
+                                          </label>
+                                          <label>
+                                                <span>Email : <span class="text-danger">*</span></span>
+                                                <input type="email" name="email" id="email">
+                                          </label>
+                                          <label>
+                                                <span>Password : <span class="text-danger">*</span></span>
+                                                <input type="text" name="password" id="password">
+                                          </label>
+                                          <label for="">
+                                                <span>Confirm Password : <span class="text-danger">*</span></span>
+                                                <input type="text" name="confirm_password" id="confirm_password">
+                                          </label>
+
+                                          <label for="">
+                                                <span>Gender : <span class="text-danger">*</span></span>
+                                                <div>
+                                                      <br>
+                                                      <label for="male">
+                                                            Male
+                                                            <input type="radio" id="male" name="gender" value="male">
+
+                                                             Female
+                                                            <input type="radio" id="female" name="gender"
+                                                                  value="female">
+
+                                                            Others
+                                                            <input type="radio" id="others" name="gender"
+                                                                  value="other">
+                                                      </label>
+                                                </div>
+                                          </label>
+
+
+                                          <label>
+                                                <span>User Image <span class="required">*</span></span>
+                                                <input type="file" name="user_image" id="product_image" multiple>
+                                                <!-- <input type="file" name="product_image" id="product_image"> -->
+                                          </label>
+                                          <label>
+                                                <span> Identity Proof<span class="required">*</span></span>
+                                                <input type="file" name="identity_proof" id="identity_proof" multiple>
+                                                <!-- <input type="file" name="product_image" id="product_image"> -->
+                                          </label>
+
+                                          <label for="">
+                                                <button class="button" style="margin-left: 45%;" type="submit">Sign
+                                                      UP</button>
+                                          </label>
+                                    </form>
+                              </div>
+                        </div>
+                  </main>
+
+                  <!-- Footer -->
+                  <%-include('../includes/footer.ejs')%>

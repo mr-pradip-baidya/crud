@@ -1,0 +1,54 @@
+<%-include('../includes/header.ejs')%>
+
+      </head>
+
+      <body>
+            <!-- Navbar -->
+            <%-include('../includes/navbar.ejs')%>
+
+                  <!-- Form -->
+                  <main>
+                        <h1 class="text-center m-3"><b><u>Edit your Data</u></b></h1>
+                        <div class="container mt-5">
+                              <div class="title">
+                                    <h2 class="text-center text-dark"><b><u>Product Details</u></b></h2>
+                              </div>
+                              <div class="d-flex">
+                                    <form action="/newProduct" method="POST" enctype="multipart/form-data">
+
+                                          <label>
+                                                <!-- <span>Product Name : <span class="text-danger">*</span></span> -->
+                                                <input type="hidden" name="p_id" id="p_id" value="<%= data._id%>">
+                                          </label>
+                                          <label>
+                                                <span>Product Name : <span class="text-danger">*</span></span>
+                                                <input type="text" name="p_name" id="p_name" value="<%= data.product_name%>">
+                                          </label>
+                                          <label>
+                                                <span>Product Price : <span class="text-danger">*</span></span>
+                                                <input type="text" name="p_price" id="p_price" value="<%= data.product_price%>">
+                                          </label>
+                                          <label>
+                                                <span>Product Company <span class="required">*</span></span>
+                                                <input type="text" name="p_company" id="p_company" value="<%= data.product_company%>" ></input>
+                                          </label>
+                                          <label>
+                                                <span>Product Image <span class="required">*</span></span>
+                                                <input type="file" name="p_image" id="p_image" multiple></input>
+
+                                                <img src="/<%= data.product_image[0]%>" alt="Image" height="100" style="margin-right: 10px;">
+                                                <img src="/<%= data.product_image[1]%>" alt="Image" height="100">
+                                          </label><br><br>
+                                          <label for="">
+                                                <a href="#"><button class="button" style="margin-left: 45%;" type="submit">Edit Product</button></a>
+                                          </label>
+                                    </form>
+                              </div>
+                        </div>
+                  </main>
+                  
+                        
+
+
+                  <!-- Footer -->
+                  <%-include('../includes/footer.ejs')%>

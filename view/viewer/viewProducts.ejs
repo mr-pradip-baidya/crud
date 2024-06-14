@@ -1,0 +1,42 @@
+<%-include('../includes/header.ejs')%>
+
+      </head>
+
+      <body>
+            <!-- Navbar -->
+            <%-include('../includes/navbar.ejs')%>
+
+                  <main class="viewMovie text-center">
+                        <h1 class=" mt-4 "><b><u>View All Products</u></b></h1><br><br>
+                        <div >
+                              <% if(data.length>0){%>
+                                    <table class="table" style="margin-left: 34.5%">
+                                          <thead class="">
+                                                <tr>
+                                                      <th scope="col">Serial No</th>
+                                                      <th scope="col">Product Name</th>
+                                                      <th scope="col">Details</th>
+                                                </tr>
+                                          </thead>
+                                          <% for(let i=0; i<data.length; i++){ %>
+                                                <tbody>
+                                                      <tr>
+                                                            <td>
+                                                                  <%=i+1 %>
+                                                            </td>
+                                                            <td>
+                                                                  <%= data[i].product_name %>
+                                                            </td>
+                                                            <td><a href="/singleValue/<%= data[i]._id%>"><button style="padding: 10px;" type="submit">View Details</button></a></td>                  
+                                                      </tr>
+                                                </tbody>
+                                          <%}%>
+                                    </table>
+                                    <% }else{ %>
+                              <% }%>
+                        </div>
+                        
+                  </main>
+
+                  <!-- Footer -->
+                  <%-include('../includes/footer.ejs')%>

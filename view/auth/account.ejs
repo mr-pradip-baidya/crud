@@ -1,0 +1,39 @@
+<%-include('../includes/header.ejs')%>
+
+      </head>
+
+      <body>
+            <!-- Navbar -->
+            <%-include('../includes/navbar.ejs')%>
+
+                  <!-- Form -->
+                  <main>
+                        <div class="container">
+                              <section class="mx-auto my-5" style="max-width: 23rem;">
+                        
+                                    <div class="card testimonial-card mt-2 mb-3">
+                                          <div class="card-up aqua-gradient"></div>
+                                          <div class="avatar mx-auto white ">
+                                                <img src="/auth/<%=user.user_image%>"   alt="User Image"  style="height:100px; width: 120px;">
+                                          </div>
+                                          <div class="card-body text-center">
+                                                <h4 class="card-title" style="font-weight: bolder;"><%= user.full_name.toUpperCase()%></h4>
+                                                <hr>
+                                                <p><i class="fas fa-quote-left">
+                                                      Email: <%= user.email%>
+                                                </i> </p>
+                                                <br>
+                                                <p><i class="fas fa-quote-left" >
+                                                      Identity Proof: <img src="/auth/<%=user.identity_proof%>" alt="Mssi" style="width: 80px; height: auto;" >
+                                                      </i> </p>
+
+                                                <a href="/logout" ><button class="mt-5" style="width: 100%;"  >Logout</button></a>
+                                          </div>
+                                        
+                                      
+                                    </div>
+                              </section>
+                        </div>  
+                  </main>
+<!-- Footer -->
+ <%-include('../includes/footer.ejs') %>
